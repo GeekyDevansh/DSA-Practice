@@ -9,13 +9,13 @@ public:
         {
             int m = s + (e-s)/2;
             
-            if(target>=letters[m])
+            if(target<letters[m])
             {
-                s=m+1;
+                e=m-1;
             }
             else
             {
-                e=m-1;
+                s=m+1;
             }
            
         }
