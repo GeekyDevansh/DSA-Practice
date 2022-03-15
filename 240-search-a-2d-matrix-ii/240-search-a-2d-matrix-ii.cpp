@@ -4,11 +4,11 @@ public:
         
         int n = matrix.size();
         int m = matrix[0].size();
-        int row = 0;
-        int col = m-1;
+        int row = n-1;
+        int col = 0;
         
         
-        while(row<n && col>=0)
+        while(row>=0 && col<m)
         {
             
             if(matrix[row][col] == target )
@@ -17,11 +17,11 @@ public:
             }
             else if (matrix[row][col] > target )
             {
-                col--;
+                row--;
             }
             else
             {
-                row++;
+                col++;
             }
         }
         return 0;
